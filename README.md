@@ -24,18 +24,19 @@ Currently operating in **Simulation Mode** for zero-cost infrastructure testing,
 
 ```mermaid
 graph TD
-    Client[Merchant Dashboard<br>(Next.js Client)] -->|POST /api/generate| API[API Gateway<br/>(Next.js Serverless)]
+    Client[Merchant Dashboard - Next.js Client] -->|POST /api/generate| API[API Gateway - Next.js Serverless]
     API -->|Invoke| Service[Bedrock Service Adapter]
     
     subgraph "AI Logic Layer"
         Service -->|Mode Check| Switch{Environment?}
-        Switch -->|Production| AWS[AWS Bedrock<br/>(Claude 3.5 Sonnet)]
-        Switch -->|Dev/Demo| Sim[Simulation Engine<br/>(Mock Latency + NLP)]
+        Switch -->|Production| AWS[AWS Bedrock - Claude 3.5 Sonnet]
+        Switch -->|Dev/Demo| Sim[Simulation Engine - Mock Latency + NLP]
     end
     
     AWS -->|Content| Response
     Sim -->|Content| Response
     Response -->|JSON| Client
+
 ```
 
 ---
