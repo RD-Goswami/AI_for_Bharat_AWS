@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("API Error:", error);
     return NextResponse.json(
-      { error: "Failed to generate marketing copy" },
+      { error: error instanceof Error ? error.message : "Failed to generate marketing copy" },
       { status: 500 }
     );
   }

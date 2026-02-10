@@ -1,43 +1,28 @@
-import { BedrockRuntimeClient, InvokeModelCommand } from "@aws-sdk/client-bedrock-runtime";
+// SIMULATION MODE - Mock AI responses for testing without AWS credentials
 
-const client = new BedrockRuntimeClient({
-  region: process.env.AWS_REGION || "us-east-1",
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID || "",
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || ""
-  }
-});
+export async function generateMarketingCopy(topic: string, businessType: string): Promise<string> {
+  // Simulate AI processing time (2 seconds)
+  await new Promise(resolve => setTimeout(resolve, 2000));
 
-export async function generateMarketingCopy(topic: string, businessType: string) {
-  const prompt = `You are Prachar.ai, an expert Indian marketing agent.
-User runs a ${businessType} business.
-Topic: ${topic}
-Task: Write 3 catchy social media captions in 'Hinglish' (Hindi + English mix). Keep it energetic and use emojis suitable for an Indian audience.`;
+  // Generate realistic Hinglish marketing response
+  const response = `📢 Namaste ${businessType} Owner! 🚀
 
-  const input = {
-    modelId: "anthropic.claude-3-5-sonnet-20240620-v1:0",
-    contentType: "application/json",
-    accept: "application/json",
-    body: JSON.stringify({
-      anthropic_version: "bedrock-2023-05-31",
-      max_tokens: 600,
-      messages: [{
-        role: "user",
-        content: [{
-          type: "text",
-          text: prompt
-        }]
-      }]
-    })
-  };
+Here is your campaign for ${topic}:
 
-  try {
-    const command = new InvokeModelCommand(input);
-    const response = await client.send(command);
-    const decoded = JSON.parse(new TextDecoder().decode(response.body));
-    return decoded.content[0].text;
-  } catch (error) {
-    console.error("Bedrock Text Error:", error);
-    throw new Error("AI Generation Failed");
-  }
+✨ The Hook:
+"Arrey wah! ${topic} is here! 😲 Don't miss out!"
+
+🎁 The Offer:
+"Flat 20% OFF only for today! 🛍️✨"
+
+🔥 Call to Action:
+"Jaldi aao! Visit us before stocks run out! 🏃‍♂️💨"
+
+---
+
+💡 Pro Tip: Share this on WhatsApp and Instagram for maximum reach in your local community!
+
+#${topic.replace(/\s+/g, '')} #IndianBusiness #LocalShop #SpecialOffer`;
+
+  return response;
 }
