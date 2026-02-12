@@ -1,25 +1,34 @@
-import { NextRequest, NextResponse } from "next/server";
-import { generateMarketingCopy } from "@/lib/bedrock";
+import { NextResponse } from 'next/server';
+import { generateMarketingCopy, generatePoster } from '@/lib/bedrock';
 
-export async function POST(request: NextRequest) {
+export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { topic, businessType } = body;
+    const { business, topic } = body;
 
-    if (!topic || !businessType) {
+    // validation
+    if (!business || !topic) {
       return NextResponse.json(
-        { error: "Missing required fields: topic and businessType" },
+        { error: 'Business and Topic are required' },
         { status: 400 }
       );
     }
 
-    const result = await generateMarketingCopy(topic, businessType);
+    // 1. Generate Text (Gemini or Backup)
+    const strategy = await generateMarketingCopy(topic, business);
 
-    return NextResponse.json({ result });
+    // 2. Generate Image (Flux)
+    const imageUrl = await generatePoster(topic, business);
+
+    // 3. Combine and Return
+    return NextResponse.json({
+      ...strategy, // spreads hook, offer, cta
+      imageUrl // adds the image url
+    });
   } catch (error) {
-    console.error("API Error:", error);
+    console.error('API Error:', error);
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : "Failed to generate marketing copy" },
+      { error: 'Failed to generate campaign' },
       { status: 500 }
     );
   }
