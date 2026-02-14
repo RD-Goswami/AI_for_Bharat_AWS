@@ -12,7 +12,9 @@
 
 *Autonomous AI-powered campaign generation in Hinglish for Indian students and creators*
 
-[🚀 Live Demo](#-quick-start) • [📚 Documentation](#-documentation-hub) • [🏗️ Architecture](#-system-architecture) • [🎯 Hackathon Alignment](#-hackathon-alignment)
+**🌐 Live Demo:** [https://prachar-ai-eta.vercel.app/](https://prachar-ai-eta.vercel.app/)
+
+[📚 Documentation](#-documentation-hub) • [🏗️ Architecture](#-system-architecture) • [👥 Team](#-team-neonx) • [🚀 Quick Start](#-quick-start)
 
 </div>
 
@@ -622,7 +624,9 @@ This project was created for the AWS "AI for Bharat" Hackathon - Student Track.
 
 **Prachar.ai - Democratizing Marketing for Indian Students** 🇮🇳
 
-*Built with ❤️ by Team NEONX using Amazon Bedrock, Strands SDK, and Kiro Methodology*
+*Developed by Team NEONX using Amazon Bedrock, Strands SDK, and Kiro Methodology*
+
+**Live Demo:** [https://prachar-ai-eta.vercel.app/](https://prachar-ai-eta.vercel.app/)
 
 [⬆ Back to Top](#pracharai-the-autonomous-ai-creative-director)
 
