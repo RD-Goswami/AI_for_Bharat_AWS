@@ -55,34 +55,65 @@
 
 Our serverless architecture orchestrates **7 AWS services** across **7 distinct layers** to deliver autonomous campaign generation:
 
-```
-┌──────────────────────────────────────────────────────────────────────┐
-│                    EXECUTION PATH (1-12)                              │
-├──────────────────────────────────────────────────────────────────────┤
-│                                                                       │
-│  Phase 1: Authentication & Entry (1-4)                               │
-│  ├─ 1. User Submission → Next.js Frontend (AWS Amplify)             │
-│  ├─ 2. Authentication → Amazon Cognito (JWT Tokens)                 │
-│  ├─ 3. Token Validation → API Gateway (Cognito Authorizer)          │
-│  └─ 4. Lambda Invocation → AWS Lambda (user_id extracted)           │
-│                                                                       │
-│  Phase 2: Agentic Reasoning & RAG (5-6)                             │
-│  ├─ 5. Agent Initialization → Strands SDK (Reason/Plan/Act)         │
-│  └─ 6. RAG Retrieval → Bedrock Knowledge Base (brand context)       │
-│                                                                       │
-│  Phase 3: Content Generation & Safety (7-8)                          │
-│  ├─ 7. Hinglish Copywriting → Claude 3.5 Sonnet (3 captions)       │
-│  └─ 8. Content Safety → Bedrock Guardrails (PII redaction)          │
-│                                                                       │
-│  Phase 4: Visual Generation & Storage (9-10)                         │
-│  ├─ 9. Image Generation → Titan Image Generator (1024x1024)         │
-│  └─ 10. Asset Storage → Amazon S3 (pre-signed URLs)                 │
-│                                                                       │
-│  Phase 5: Persistence & Delivery (11-12)                             │
-│  ├─ 11. Data Persistence → DynamoDB (user-isolated storage)         │
-│  └─ 12. Campaign Delivery → Frontend (complete campaign)            │
-│                                                                       │
-└──────────────────────────────────────────────────────────────────────┘
+```mermaid
+graph TD
+    %% Phase 1: Authentication & Entry
+    subgraph Phase1["🔐 Phase 1: Authentication & Entry"]
+        A1["1️⃣ User Submission<br/>Next.js Frontend<br/>(AWS Amplify)"]
+        A2["2️⃣ Authentication<br/>Amazon Cognito<br/>(JWT Tokens)"]
+        A3["3️⃣ Token Validation<br/>API Gateway<br/>(Cognito Authorizer)"]
+        A4["4️⃣ Lambda Invocation<br/>AWS Lambda<br/>(user_id extracted)"]
+    end
+    
+    %% Phase 2: Agentic Reasoning & RAG
+    subgraph Phase2["🤖 Phase 2: Agentic Reasoning & RAG"]
+        B1["5️⃣ Agent Initialization<br/>Strands SDK<br/>(Reason/Plan/Act)"]
+        B2["6️⃣ RAG Retrieval<br/>Bedrock Knowledge Base<br/>(brand context)"]
+    end
+    
+    %% Phase 3: Content Generation & Safety
+    subgraph Phase3["✍️ Phase 3: Content Generation & Safety"]
+        C1["7️⃣ Hinglish Copywriting<br/>Claude 3.5 Sonnet<br/>(3 captions)"]
+        C2["8️⃣ Content Safety<br/>Bedrock Guardrails<br/>(PII redaction)"]
+    end
+    
+    %% Phase 4: Visual Generation & Storage
+    subgraph Phase4["🎨 Phase 4: Visual Generation & Storage"]
+        D1["9️⃣ Image Generation<br/>Titan Image Generator<br/>(1024x1024)"]
+        D2["🔟 Asset Storage<br/>Amazon S3<br/>(pre-signed URLs)"]
+    end
+    
+    %% Phase 5: Persistence & Delivery
+    subgraph Phase5["💾 Phase 5: Persistence & Delivery"]
+        E1["1️⃣1️⃣ Data Persistence<br/>DynamoDB<br/>(user-isolated storage)"]
+        E2["1️⃣2️⃣ Campaign Delivery<br/>Frontend<br/>(complete campaign)"]
+    end
+    
+    %% Flow connections
+    A1 --> A2
+    A2 --> A3
+    A3 --> A4
+    A4 --> B1
+    B1 --> B2
+    B2 --> C1
+    C1 --> C2
+    C2 --> D1
+    D1 --> D2
+    D2 --> E1
+    E1 --> E2
+    
+    %% Styling with AWS colors
+    classDef authStyle fill:#DD344C,stroke:#A91B2E,stroke-width:3px,color:#fff
+    classDef computeStyle fill:#FF9900,stroke:#CC7A00,stroke-width:3px,color:#fff
+    classDef aiStyle fill:#527FFF,stroke:#3D5FCC,stroke-width:3px,color:#fff
+    classDef storageStyle fill:#569A31,stroke:#3D6D22,stroke-width:3px,color:#fff
+    classDef deliveryStyle fill:#00A1C9,stroke:#007A99,stroke-width:3px,color:#fff
+    
+    class A1,A2,A3 authStyle
+    class A4,B1 computeStyle
+    class B2,C1,C2,D1 aiStyle
+    class D2,E1 storageStyle
+    class E2 deliveryStyle
 ```
 
 **📊 Full Architecture Diagram:** See [`architecture/system-architecture.dot`](architecture/system-architecture.dot) for the complete professional-tier Graphviz diagram with all 7 layers and AWS service integrations.
