@@ -269,23 +269,6 @@ This project follows **Kiro's rigorous spec-driven methodology** with comprehens
 
 ---
 
-## 🎯 Hackathon Alignment
-
-### AI for Bharat - Student Track: Media, Content & Creativity
-
-**Projected Score: 100/100** ✅
-
-| Criteria | Max Points | Our Score | Evidence |
-|----------|-----------|-----------|----------|
-| **Innovation & Creativity** | 25 | 25 | Autonomous agentic AI, Hinglish generation, RAG-based brand consistency |
-| **Technical Excellence** | 25 | 25 | 7 AWS services, 4 Bedrock services, secure auth, 4/4 tests passing |
-| **Impact & Usefulness** | 20 | 20 | Solves real student problem, culturally relevant, practical application |
-| **Presentation & Demo** | 15 | 15 | Demo-ready (1.38ms), professional docs (8000+ lines), clear architecture |
-| **AWS Service Utilization** | 15 | 15 | Bedrock (4), Cognito, Lambda, DynamoDB, S3, API Gateway, CloudWatch |
-| **TOTAL** | **100** | **100** | **Perfect Alignment** ✅ |
-
-**Detailed Review:** See [HACKATHON_CRITERIA_REVIEW.md](specs/HACKATHON_CRITERIA_REVIEW.md) for complete criteria-by-criteria analysis.
-
 ---
 
 ## 🚀 Quick Start
@@ -507,37 +490,6 @@ Prachar.ai was built using **Kiro's structured development methodology**, ensuri
 
 ---
 
-## 📊 Demo Highlights
-
-### 30-Second Pitch
-
-> "Prachar.ai is an autonomous AI Creative Director that generates professional social media campaigns in Hinglish for Indian students. Using Amazon Bedrock's Claude and Titan models orchestrated by Strands SDK, our agent autonomously plans campaigns, retrieves brand context via RAG, generates culturally relevant copy, and creates campaign posters—all secured with Amazon Cognito JWT authentication. We achieve 1.38ms response time in demo mode with 100% test pass rate and complete documentation following Kiro's spec-driven methodology."
-
-### Live Demo Flow (90 seconds)
-
-1. **Show Architecture** (20s)
-   - Display 12-step execution path
-   - Highlight 7 AWS services
-   - Point to agentic loop
-
-2. **Execute Generation** (30s)
-   - Enter: "Python AI Mastery Workshop"
-   - Click: "Generate Campaign"
-   - Show: Instant response (1.38ms)
-
-3. **Highlight Quality** (20s)
-   - Professional Hinglish copy
-   - Technical depth (Neural Networks, APIs)
-   - Cultural context (chai, late-night coding)
-   - Beautiful campaign poster
-
-4. **Show Security** (20s)
-   - Cognito authentication
-   - User-isolated data
-   - Complete audit trail
-
----
-
 ## 🏆 Competitive Advantages
 
 ### 1. Autonomous Agentic AI ⭐⭐⭐
@@ -589,15 +541,49 @@ Prachar.ai was built using **Kiro's structured development methodology**, ensuri
 
 ---
 
-## 🎉 Status
+## 👥 Team NEONX
 
-**Project Status:** ✅ HACKATHON SUBMISSION READY  
-**Documentation:** ✅ COMPLETE (8000+ lines)  
-**Implementation:** ✅ COMPLETE (2000+ lines)  
-**Testing:** ✅ PASSING (4/4 suites)  
-**Demo:** ✅ READY (1.38ms response)  
-**Architecture:** ✅ PROFESSIONAL-TIER  
-**Projected Score:** 💯 100/100
+This project was built by **Team NEONX** for the AWS "AI for Bharat" Hackathon - Student Track.
+
+### Core Team
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/SxBxcoder">
+        <img src="https://github.com/SxBxcoder.png" width="100px;" alt="Sayandip Bhattacharya"/>
+        <br />
+        <sub><b>Sayandip Bhattacharya</b></sub>
+      </a>
+      <br />
+      <sub>Main Developer</sub>
+      <br />
+      <sub>Architecture, Backend, AI Integration</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/RD-Goswami">
+        <img src="https://github.com/RD-Goswami.png" width="100px;" alt="Radhadipto Goswami"/>
+        <br />
+        <sub><b>Radhadipto Goswami</b></sub>
+      </a>
+      <br />
+      <sub>Presentation Lead</sub>
+      <br />
+      <sub>PPT Development, Documentation</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Sourashis-Chatterjee">
+        <img src="https://github.com/Sourashis-Chatterjee.png" width="100px;" alt="Sourashis Chatterjee"/>
+        <br />
+        <sub><b>Sourashis Chatterjee</b></sub>
+      </a>
+      <br />
+      <sub>Presentation Developer</sub>
+      <br />
+      <sub>PPT Development, Content</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -624,6 +610,7 @@ This project was created for the AWS "AI for Bharat" Hackathon - Student Track.
 
 ## 🙏 Acknowledgments
 
+- **Team NEONX** for the collaborative effort and dedication
 - **AWS** for Amazon Bedrock and serverless infrastructure
 - **Strands** for the agentic AI SDK
 - **Kiro** for spec-driven development methodology
@@ -635,9 +622,7 @@ This project was created for the AWS "AI for Bharat" Hackathon - Student Track.
 
 **Prachar.ai - Democratizing Marketing for Indian Students** 🇮🇳
 
-*Built with ❤️ using Amazon Bedrock, Strands SDK, and Kiro Methodology*
-
-**Ready to win the AI for Bharat Hackathon!** 🏆
+*Built with ❤️ by Team NEONX using Amazon Bedrock, Strands SDK, and Kiro Methodology*
 
 [⬆ Back to Top](#pracharai-the-autonomous-ai-creative-director)
 
