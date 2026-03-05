@@ -12,7 +12,7 @@
 
 *Aggressive, high-energy Hinglish marketing via a 400B-parameter cascade*
 
-**🌐 Live Demo:** [https://main.d2ki8qllteczjr.amplifyapp.com/](https://main.d2ki8qllteczjr.amplifyapp.com/)
+**🌐 Live Demo:** [https://main.d168pkgc3x4eic.amplifyapp.com/](https://main.d168pkgc3x4eic.amplifyapp.com/)
 
 [📚 Documentation](#-documentation-hub) • [🏗️ Architecture](#-system-architecture) • [👥 Team](#-team-neonx) • [🚀 Quick Start](#-quick-start)
 
@@ -497,7 +497,7 @@ git push origin main
 # Amplify auto-deploys
 ```
 
-**Live Demo:** [https://main.d2ki8qllteczjr.amplifyapp.com/](https://main.d2ki8qllteczjr.amplifyapp.com/)
+**Live Demo:** [https://main.d168pkgc3x4eic.amplifyapp.com/](https://main.d168pkgc3x4eic.amplifyapp.com/)
 
 **Demo Guide:** See [QUICK_START_WAR_ROOM.md](QUICK_START_WAR_ROOM.md) for complete setup instructions.
 
@@ -722,7 +722,7 @@ Prachar.ai was built using **Kiro's structured development methodology**, ensuri
 ## 📞 Resources & Links
 
 ### Live Demo
-- 🌐 **Production URL:** [https://main.d2ki8qllteczjr.amplifyapp.com/](https://main.d2ki8qllteczjr.amplifyapp.com/)
+- 🌐 **Production URL:** [https://main.d168pkgc3x4eic.amplifyapp.com/](https://main.d168pkgc3x4eic.amplifyapp.com/)
 - 🎮 **War Room UI:** Experience the Director's tactical dashboard
 - 🔐 **Authentication:** Sign up with Cognito to access full features
 
@@ -867,7 +867,7 @@ This project was created for the AWS "AI for Bharat" Hackathon - Student Track.
 
 **Developed by Team NEONX using Amazon Bedrock, 5-Tier Diamond Cascade, and Kiro Methodology**
 
-**Live Demo:** [https://main.d2ki8qllteczjr.amplifyapp.com/](https://main.d2ki8qllteczjr.amplifyapp.com/)
+**Live Demo:** [https://main.d168pkgc3x4eic.amplifyapp.com/](https://main.d168pkgc3x4eic.amplifyapp.com/)
 
 ---
 
