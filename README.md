@@ -835,7 +835,7 @@ Prachar.ai was built using **Kiro's structured development methodology**, ensuri
 ### 7. Documentation Quality ⭐⭐⭐
 **Unique:** 12,000+ lines of specification documentation  
 **Technical:** Kiro spec-driven methodology  
-**Impact:** Professional project structure and maintainabilityrformance-optimized  
+**Impact:** Professional project structure and 100% traceability for maintenance and scaling  
 **Architectural Pivot:** Initially built on Amazon Bedrock (Nova/Titan), the project hit severe Quota Limits and ThrottlingExceptions on student accounts. Instead of failing, we engineered a 5-Tier external cascade via Lambda, turning a critical cloud failure point into an enterprise-grade high-availability feature.
 
 ### 3. Cultural Authenticity ⭐⭐⭐
