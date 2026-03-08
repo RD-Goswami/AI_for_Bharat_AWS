@@ -80,7 +80,7 @@ export default function Home() {
                 The AI Creative Director for Campus & Creators
               </p>
               <p className="text-base text-gray-500 max-w-xl mx-auto">
-                Generate viral Hinglish campaigns, stunning visuals, and engaging copy in seconds. Built for Indian students and creators.
+                Generate viral Hinglish campaigns, structured marketing strategies, and authentic local copy in seconds. Built for Indian students and creators.
               </p>
             </div>
 
@@ -117,8 +117,8 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-full bg-purple-500/10 flex items-center justify-center mb-4">
                   <Zap className="w-6 h-6 text-purple-400" />
                 </div>
-                <h3 className="text-lg font-bold mb-2">Instant Visuals</h3>
-                <p className="text-sm text-gray-400">Create stunning campaign posters in seconds with AI</p>
+                <h3 className="text-lg font-bold mb-2">Viral Strategy Architecture</h3>
+                <p className="text-sm text-gray-400">Autonomously structure your hooks, offers, and CTAs for maximum Gen-Z engagement</p>
               </div>
 
               <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 text-left">
@@ -126,7 +126,7 @@ export default function Home() {
                   <Layers className="w-6 h-6 text-pink-400" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">Complete Campaigns</h3>
-                <p className="text-sm text-gray-400">Get strategy, copy, and visuals - all in one place</p>
+                <p className="text-sm text-gray-400">Get strategy, viral Hinglish copy, and deployment steps - all in one place</p>
               </div>
             </div>
           </motion.div>
